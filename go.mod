@@ -1,4 +1,4 @@
-module github.com/status-im/go-discover
+module github.com/SangameswaranRS/go-discover
 
 go 1.15
 

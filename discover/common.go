@@ -25,7 +25,7 @@ import (
 	"github.com/ethereum/go-ethereum/p2p/enode"
 	"github.com/ethereum/go-ethereum/p2p/enr"
 	"github.com/ethereum/go-ethereum/p2p/netutil"
-	"github.com/status-im/go-discover/discover/v5wire"
+	"github.com/SangameswaranRS/go-discover/discover/v5wire"
 )
 
 // UDPConn is a network connection on which discovery can operate.
