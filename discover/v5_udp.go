@@ -43,7 +43,7 @@ const (
 	totalNodesResponseLimit = 5  // applies in waitForNodes
 	nodesResponseItemLimit  = 3  // applies in sendNodes
 
-	respTimeoutV5 = 700 * time.Millisecond
+	respTimeoutV5 = 10 * time.Second
 )
 
 // codecV5 is implemented by v5wire.Codec (and testCodec).
@@ -54,7 +54,7 @@ type codecV5 interface {
 	// Encode encodes a packet.
 	Encode(enode.ID, string, v5wire.Packet, *v5wire.Whoareyou) ([]byte, v5wire.Nonce, error)
 
-	// decode decodes a packet. It returns a *v5wire.Unknown packet if decryption fails.
+	// Decode decode decodes a packet. It returns a *v5wire.Unknown packet if decryption fails.
 	// The *enode.Node return value is non-nil when the input contains a handshake response.
 	Decode([]byte, string) (enode.ID, *enode.Node, v5wire.Packet, error)
 }
